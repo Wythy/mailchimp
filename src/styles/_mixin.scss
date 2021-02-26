@@ -1,0 +1,14 @@
+@mixin align-content($jc_value, $ai_value) {
+  display: flex;
+  justify-content: $jc_value;
+  align-items: $ai_value;
+};
+
+@mixin button($padding_tb, $padding_rl, $bg_btn_color, $border_weight, $border_type, $border_color, $btn_txt_color) {
+  display: inline-block;
+  text-align: center;
+  color: $btn_txt_color;
+  padding: $padding_tb $padding_rl;
+  background-color: $bg_btn_color;
+  border: $border_weight $border_type $border_color;
+}

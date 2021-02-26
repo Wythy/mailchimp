@@ -8,7 +8,16 @@
 @import "./footer";
 
 .wrapper {
-  width: 600px;
   margin: 0 auto;
+  padding: 0 25px;
+  @media screen and (max-width: 1200px + 1) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 768px + 1) {
+    padding: 0 12px;
+  }
 }
 
+.wrapper-header {
+  max-width: 1350px;
+}

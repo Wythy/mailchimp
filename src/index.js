@@ -1,3 +1,4 @@
+//
 // Images
 import "./images/banner.jpg"                      
 import "./images/customer_journey.png"            
@@ -29,4 +30,5 @@ import "./styles/index.scss";
 
 // Scripts
 import "./slider";
+import "./responsive_menu";
 

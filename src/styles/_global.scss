@@ -4,3 +4,7 @@ html {
   color: $primary;
   background-color: $white;
 }
+
+* > a {
+  text-decoration: none;
+}

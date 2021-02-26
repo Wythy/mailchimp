@@ -1,4 +1,152 @@
+.visible {
+  transform: scaleZ(0);
+}
+
 .header {
-  background: url(../images/banner.jpg);
-  height: 100vh;
+  position: relative;
+  background-color: $white;
+  padding: 22px 0;
+
+  //mobile
+
+  &__mobile {
+    position: absolute;
+    // top: 84px;
+    // right: 0;
+    @include align-content(center, center);
+    flex-direction: column;
+    background-color: $white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    transition: all .1s;
+  }
+  
+  &__mobile-menu-item {
+    margin-bottom: 16px;
+    a{
+      font-size: 2.8rem;
+      line-height: 1.6em;
+      color: $black;
+      &:hover{
+        color: $green;
+      }
+    }
+  }
+
+  &__mobile-btn-login {
+    @include button(12px, 0, $white, 2px, solid, $black, $black);
+    font-size: 2rem;
+    line-height: 1em;
+    margin-bottom: 16px;
+    width: 25%;
+    &:hover{
+      background-color: $green;
+      border-color: $green;
+      color: $white;
+    }
+  }
+
+  &__mobile-btn-signin {
+    @include button(12px, 0, $green, 2px, solid, $green, $white);
+    font-size: 2rem;
+    line-height: 1em;
+    width: 25%;
+    &:hover{
+      background-color: $white;
+      border-color: $black;
+      color: $black;
+    }
+  }
+
+  .toggle-btn {    
+    @include button(16px, 16px, $white, 2px, solid, $black, $black);
+    display: none;
+    z-index: 99;
+    &:hover{
+      background-color: $green;
+      border-color: $green;
+      color: $white;
+    }
+    span {
+      display: block;
+      height: 2px;
+      width: 15px;
+      background-color: $black;
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  //../mobile
+
+  &__logo {
+    z-index: 99;
+  }
+
+  &__inner-container {
+    @include align-content(space-between, center);
+  }
+
+  &__menu {
+    @include align-content(space-between, center);
+  }
+
+  &__menu-item {
+    a{
+      font-size: 1.4rem;
+      line-height: 1.02em;
+      color: $black;
+      &:hover{
+        color: $green;
+      }
+    }
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-right: 44px;
+  }
+
+  &__btn-login {
+    @include button(12px, 29px, $white, 2px, solid, $black, $black);
+    font-size: 1.4rem;
+    line-height: 1.37em;
+    margin-right: 24px;
+    &:hover{
+      background-color: $green;
+      border-color: $green;
+      color: $white;
+    }
+  }
+
+  &__btn-signin {
+    @include button(12px, 29px, $green, 2px, solid, $green, $white);
+    font-size: 1.4rem;
+    line-height: 1.37em;
+    &:hover{
+      background-color: $white;
+      border-color: $black;
+      color: $black;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px + 1) {
+  .header{
+    // display: none;
+
+    .toggle-btn {
+      order: 2;
+    }
+    
+    &__btn, nav{
+      display: none;
+    }
+
+    .toggle-btn{
+      display: block;
+    }
+  }
 }
